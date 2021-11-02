@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Let's Create a List of Our Favorite Things!!</title>
+
+</head>
+
+<body>
+Color: <input color="color" size="20" th:field="*{color}"><br />
+Food: <input food="food" size="20" th:field="*{food}"><br />
+Music: <input music="music" size="20" th:field="*{music}"><br />
+
+<input name="submit" type="submit" value="submit" />
+
+<a href="viewList">View Your List</a>
+</body>
+
+</html>

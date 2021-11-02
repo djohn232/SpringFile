@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>View Your List</title>
+</head>
+<body>
+<form>
+<table>
+<tr th:each="currentList: ${lists}" >
+<td th:text="${currentList.color}" />
+ <td th:text="${currentList.food}" />
+ <td th:text="${currentList.music}" />
+<td><a th:href="@{/edit/{id}(id=${currentList.lists})}">Edit</a></td>
+<td><a th:href="@{/delete/{id}(id=${currentList.lists})}">Delete</a></td>
+</tr>
+</table>
+</form>
+<a href="../index">Create A New List</a>
+</body>
+</html>
