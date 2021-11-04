@@ -41,6 +41,10 @@ public class favoriteThings {
 		return "Favorite Things [color=" + color + ", food=" + food + ", music=" + music + "]";
 	}
 
-	
+	public favoriteThings(String color, String food, String music) {
+		this.color = color;
+		this.food = food; 
+		this.music = music;
+		}
 	
 }
