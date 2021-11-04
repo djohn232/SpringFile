@@ -19,14 +19,14 @@ import beans.favoriteThings;
 @Controller
 public class controller {
 	
-	@GetMapping("/playagame")
+	@GetMapping("/makealist")
 	
 	public String makeList(@RequestParam(name="choices",required=false) String foodChoice, String musicChoice, String colorChoice, Model model) {
 		if(colorChoice.equals(null) || foodChoice.equals(null) || musicChoice.equals(null)){
 			return "index";
 		}
 		
-		favoriteThings theList = new favoriteThings(colorChoice, foodChoice, musicChoice);
+		favoriteThings theList = new favoriteThings();
 		
 		model.addAttribute("favorite things", theList);
 		
